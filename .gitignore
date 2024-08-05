@@ -1,3 +1,5 @@
 *.dwg
 env/
 .vscode/
+iterator.sh
+nohup.out
