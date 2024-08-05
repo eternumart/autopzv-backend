@@ -8,6 +8,10 @@ class Dwg(db.Model):
     layers = db.relationship('Layer', backref='dwg', lazy=True)
     created_at = db.Column(db.DateTime(timezone=True), default=func.now())
     updated_at = db.Column(db.DateTime(timezone=True), onupdate=func.now())
+    min_x = db.Column(db.Float)  # New field
+    min_y = db.Column(db.Float)  # New field
+    max_x = db.Column(db.Float)  # New field
+    max_y = db.Column(db.Float)  # New field
 
 class Layer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
